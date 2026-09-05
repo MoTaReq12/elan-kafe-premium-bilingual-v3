@@ -1,164 +1,503 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#171719">
-<title>ELAN KAFE | Official Links</title>
-<style>
-:root {
-  --bg:#171719;
-  --bg2:#211d1b;
-  --panel:rgba(36,34,34,.78);
-  --cream:#f4f0e9;
-  --gold:#cba66c;
-  --gold-light:#e6c890;
-  --wine:#5a1719;
-  --wine2:#2d0d10;
-  --line:rgba(203,166,108,.28);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0; min-height:100vh; color:var(--cream);
-  font-family:Arial,Helvetica,sans-serif;
-  background:
-    radial-gradient(circle at 50% -8%, rgba(203,166,108,.16), transparent 31%),
-    radial-gradient(circle at 0% 40%, rgba(90,23,25,.18), transparent 30%),
-    radial-gradient(circle at 100% 85%, rgba(90,23,25,.14), transparent 28%),
-    linear-gradient(160deg,#151517 0%,#201d1b 48%,#141416 100%);
-}
-body:before{
-  content:"";position:fixed;inset:0;pointer-events:none;opacity:.38;
-  background-image:radial-gradient(rgba(255,255,255,.09) .6px,transparent .7px);
-  background-size:5px 5px;mix-blend-mode:overlay;
-}
-.shell{width:min(100%,580px);margin:auto;padding:20px 15px 44px;position:relative}
-.hero{
-  position:relative;overflow:hidden;border-radius:30px;padding:30px 20px 25px;
-  text-align:center;background:linear-gradient(145deg,rgba(83,22,24,.72),rgba(20,20,22,.9) 52%,rgba(45,13,16,.78));
-  border:1px solid var(--line);box-shadow:0 25px 80px rgba(0,0,0,.45);
-}
-.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(203,166,108,.34);border-radius:50%;pointer-events:none}
-.hero:before{width:420px;height:420px;top:-310px;left:-180px}
-.hero:after{width:350px;height:350px;bottom:-285px;right:-180px}
-.logo-ring{
-  position:relative;z-index:1;width:145px;height:145px;margin:0 auto 13px;padding:7px;
-  border-radius:32px;background:linear-gradient(135deg,var(--gold-light),rgba(203,166,108,.12),var(--gold));
-  box-shadow:0 12px 35px rgba(0,0,0,.42);
-}
-.logo-ring img{width:100%;height:100%;object-fit:cover;border-radius:26px}
-.brand{position:relative;z-index:1;margin:0;font-family:Georgia,serif;font-size:28px;letter-spacing:7px;font-weight:500}
-.brand-sub{position:relative;z-index:1;margin:10px 0 0;color:var(--gold-light);font-size:10px;letter-spacing:3px;line-height:1.9}
-.welcome{position:relative;z-index:1;margin:20px 0 0;font-size:13px;color:#c8c3bc}
-.ornament{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:10px;color:var(--gold);margin-top:15px;font-size:14px}
-.ornament:before,.ornament:after{content:"";width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
-.ornament:after{transform:scaleX(-1)}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171719">
+  <title>إيلان كافيه | ELAN KAFE - الروابط الرسمية</title>
+  
+  <!-- خط تجوال الأنيق من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-.section-title{text-align:center;margin:24px 0 13px;color:var(--gold-light);font-size:10px;letter-spacing:4px}
-.links{display:grid;gap:12px}
-.link{
-  min-height:72px;position:relative;display:flex;align-items:center;justify-content:center;
-  padding:13px 60px;border-radius:20px;text-decoration:none;color:var(--cream);
-  background:linear-gradient(120deg,rgba(46,43,43,.94),rgba(27,27,29,.96));
-  border:1px solid rgba(203,166,108,.2);box-shadow:0 10px 28px rgba(0,0,0,.25);
-  transition:.25s transform,.25s border-color,.25s box-shadow;font-weight:700;letter-spacing:1px;
-}
-.link:hover{transform:translateY(-3px);border-color:rgba(230,200,144,.75);box-shadow:0 16px 35px rgba(0,0,0,.34)}
-.link:active{transform:scale(.985)}
-.link.featured{background:linear-gradient(120deg,#5a1719,#321013 52%,#1e1c1c);border-color:rgba(230,200,144,.55)}
-.icon{
-  position:absolute;left:17px;width:39px;height:39px;border-radius:13px;display:grid;place-items:center;
-  background:linear-gradient(135deg,rgba(203,166,108,.24),rgba(90,23,25,.25));
-  border:1px solid rgba(203,166,108,.25);color:var(--gold-light);font-size:20px;
-}
-.arrow{position:absolute;right:19px;color:var(--gold);font-size:23px;font-weight:300}
+  <style>
+    :root {
+      --bg: #171719;
+      --bg2: #211d1b;
+      --panel: rgba(36, 34, 34, 0.85);
+      --cream: #f4f0e9;
+      --gold: #cba66c;
+      --gold-light: #e6c890;
+      --wine: #5a1719;
+      --line: rgba(203, 166, 108, 0.3);
+      --font-family: 'Tajawal', Arial, sans-serif;
+    }
 
-.review-card{
-  margin-top:25px;padding:22px 16px;border-radius:25px;text-align:center;
-  background:linear-gradient(145deg,rgba(90,23,25,.32),rgba(24,24,26,.9));
-  border:1px solid var(--line);box-shadow:0 15px 45px rgba(0,0,0,.25);
-}
-.review-card h2{font-family:Georgia,serif;font-weight:500;letter-spacing:2px;font-size:21px;margin:0 0 7px}
-.review-card p{margin:0 0 15px;color:#c6c0b8;font-size:13px;line-height:1.7}
-.review-btn{
-  width:100%;min-height:65px;border:0;border-radius:18px;cursor:pointer;
-  color:#211b17;background:linear-gradient(135deg,var(--gold-light),var(--gold));
-  font-size:14px;font-weight:800;letter-spacing:1px;
-  box-shadow:0 10px 25px rgba(0,0,0,.25)
-}
-.review-hint{margin-top:12px!important;font-size:11px!important;color:#968e84!important}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-footer{text-align:center;margin-top:28px;color:#817a72;font-size:10px;letter-spacing:3px}
-.modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(10,10,11,.97);overflow-y:auto;padding:18px}
-.modal.open{display:block}
-.modal-inner{width:min(100%,780px);margin:0 auto;padding:54px 0 25px}
-.close{
-  position:fixed;right:16px;top:16px;width:46px;height:46px;border-radius:50%;
-  border:1px solid var(--line);background:#282527;color:var(--cream);font-size:25px;cursor:pointer;z-index:101
-}
-.menu-head{text-align:center;margin:0 0 18px;color:var(--gold-light);font-size:11px;letter-spacing:4px}
-.menu-pages{display:grid;gap:18px}
-.menu-page{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 45px rgba(0,0,0,.4)}
-.menu-page img{display:block;width:100%;height:auto}
+    html {
+      scroll-behavior: smooth;
+    }
 
-@media(max-width:420px){
- .shell{padding:12px 10px 34px} .hero{border-radius:24px;padding:24px 15px 21px}
- .logo-ring{width:125px;height:125px} .brand{font-size:23px;letter-spacing:5px}
- .link{min-height:67px;font-size:14px}
-}
+    body {
+      min-height: 100vh;
+      color: var(--cream);
+      font-family: var(--font-family);
+      background:
+        radial-gradient(circle at 50% -8%, rgba(203, 166, 108, 0.18), transparent 35%),
+        radial-gradient(circle at 0% 40%, rgba(90, 23, 25, 0.2), transparent 32%),
+        radial-gradient(circle at 100% 85%, rgba(90, 23, 25, 0.16), transparent 30%),
+        linear-gradient(160deg, #151517 0%, #201d1b 50%, #141416 100%);
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
+    /* تأثير الملمس الخلفي */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.3;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.1) 0.6px, transparent 0.7px);
+      background-size: 6px 6px;
+      z-index: 0;
+    }
 
-.menu-pages{display:grid;gap:18px;max-height:78vh;overflow-y:auto;padding-right:2px}
-.menu-page{background:#fff}
-.menu-page img{display:block;width:100%;height:auto}
-</style>
+    .shell {
+      width: min(100%, 580px);
+      padding: 24px 16px 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* الهيدر الرئيسي */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 32px 20px 28px;
+      text-align: center;
+      background: linear-gradient(145deg, rgba(83, 22, 24, 0.75), rgba(20, 20, 22, 0.92) 55%, rgba(45, 13, 16, 0.8));
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(203, 166, 108, 0.25);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::before { width: 400px; height: 400px; top: -300px; right: -180px; }
+    .hero::after { width: 320px; height: 320px; bottom: -260px; left: -160px; }
+
+    /* إطار الشعار */
+    .logo-ring {
+      position: relative;
+      z-index: 1;
+      width: 135px;
+      height: 135px;
+      margin: 0 auto 16px;
+      padding: 6px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--gold-light), rgba(203, 166, 108, 0.15), var(--gold));
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .logo-ring img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .brand {
+      position: relative;
+      z-index: 1;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--cream);
+    }
+
+    .brand-sub {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+
+    .welcome {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #c8c3bc;
+      line-height: 1.6;
+    }
+
+    /* الزخرفة الفاصلة */
+    .ornament {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--gold);
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    .ornament::before, .ornament::after {
+      content: "";
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    .ornament::after {
+      transform: scaleX(-1);
+    }
+
+    /* عنوان القائمة */
+    .section-title {
+      text-align: center;
+      margin: 28px 0 16px;
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    /* شبكة الروابط */
+    .links {
+      display: grid;
+      gap: 14px;
+    }
+
+    .link {
+      min-height: 70px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 55px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: var(--cream);
+      background: linear-gradient(120deg, rgba(46, 43, 43, 0.92), rgba(27, 27, 29, 0.95));
+      border: 1px solid rgba(203, 166, 108, 0.22);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      transition: all 0.28s ease;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .link:hover {
+      transform: translateY(-3px);
+      border-color: rgba(230, 200, 144, 0.75);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .link:active {
+      transform: scale(0.98);
+    }
+
+    /* زر بارز (المنيو الإلكتروني) */
+    .link.featured {
+      background: linear-gradient(120deg, #5a1719, #321013 55%, #1e1c1c);
+      border-color: rgba(230, 200, 144, 0.65);
+      box-shadow: 0 10px 28px rgba(90, 23, 25, 0.4);
+    }
+
+    .icon {
+      position: absolute;
+      right: 16px;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(203, 166, 108, 0.2), rgba(90, 23, 25, 0.3));
+      border: 1px solid rgba(203, 166, 108, 0.3);
+      color: var(--gold-light);
+      font-size: 20px;
+    }
+
+    .arrow {
+      position: absolute;
+      left: 20px;
+      color: var(--gold);
+      font-size: 18px;
+      font-weight: 300;
+      transition: transform 0.25s ease;
+    }
+
+    .link:hover .arrow {
+      transform: translateX(-4px);
+    }
+
+    /* كارت التقييم */
+    .review-card {
+      margin-top: 28px;
+      padding: 24px 20px;
+      border-radius: 24px;
+      text-align: center;
+      background: linear-gradient(145deg, rgba(90, 23, 25, 0.35), rgba(24, 24, 26, 0.92));
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .review-card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--cream);
+    }
+
+    .review-card p {
+      margin-bottom: 16px;
+      color: #c6c0b8;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .review-btn {
+      width: 100%;
+      min-height: 56px;
+      border: 0;
+      border-radius: 16px;
+      cursor: pointer;
+      color: #1e1814;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 20px rgba(203, 166, 108, 0.25);
+      transition: all 0.25s ease;
+      font-family: var(--font-family);
+    }
+
+    .review-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(203, 166, 108, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      color: #817a72;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    /* المودال (نافذة المنيو) */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 11, 0.96);
+      backdrop-filter: blur(8px);
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .modal.open {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-inner {
+      width: min(100%, 720px);
+      margin: 0 auto;
+      padding: 50px 0 30px;
+    }
+
+    .close-btn {
+      position: fixed;
+      left: 20px;
+      top: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: #252223;
+      color: var(--cream);
+      font-size: 22px;
+      cursor: pointer;
+      z-index: 1001;
+      display: grid;
+      place-items: center;
+      transition: background 0.2s;
+    }
+
+    .close-btn:hover {
+      background: var(--wine);
+    }
+
+    .menu-head {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--gold-light);
+      font-size: 13px;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .menu-pages {
+      display: grid;
+      gap: 20px;
+    }
+
+    .menu-page {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      background: #fff;
+    }
+
+    .menu-page img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* التكيف مع الشاشات الصغيرة */
+    @media (max-width: 480px) {
+      .shell { padding: 16px 12px 36px; }
+      .hero { border-radius: 22px; padding: 24px 16px 20px; }
+      .logo-ring { width: 115px; height: 115px; }
+      .brand { font-size: 22px; }
+      .link { min-height: 64px; font-size: 14px; padding: 10px 48px; }
+    }
+  </style>
 </head>
 <body>
-<div class="shell">
-  <section class="hero">
-    <div class="logo-ring"><img src="data:image/jpeg;base64,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"></div>
-    <h1 class="brand">ELAN KAFE</h1>
-    <p class="brand-sub">LUXURY COFFEE &amp; FINE DESSERTS</p>
-    <p class="welcome">Welcome to Elan Kafe. Choose a service below.</p>
-    <div class="ornament">&#10022;</div>
-  </section>
 
-  <p class="section-title">QUICK ACCESS LINKS</p>
+  <div class="shell">
+    <!-- الهيدر والتعريف -->
+    <header class="hero">
+      <div class="logo-ring">
+        <!-- يمكنك تغيير مصدر الصورة بـ URL اللوجو الخاص بك -->
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=300&auto=format&fit=crop&q=80" alt="Logo">
+      </div>
+      <h1 class="brand">إيلان كافيه | ELAN KAFE</h1>
+      <p class="brand-sub">SPECIALTY COFFEE & BAKERY</p>
+      <p class="welcome">أهلاً بكم في إيلان كافيه. يسعدنا تقديم أجود أنواع القهوة المختصة والمخبوزات الطازجة يومياً.</p>
+      
+      <div class="ornament">❖</div>
+    </header>
 
-  <div class="links">
-    <a href="#" class="link featured">
-      <span class="icon">&#9749;</span>
-      <span>VIEW OUR MENU</span>
-      <span class="arrow">&#8250;</span>
-    </a>
-    <a href="#" class="link">
-      <span class="icon">&#128269;</span>
-      <span>INSTAGRAM PAGE</span>
-      <span class="arrow">&#8250;</span>
-    </a>
-    <a href="#" class="link">
-      <span class="icon">&#128222;</span>
-      <span>WHATSAPP SUPPORT</span>
-      <span class="arrow">&#8250;</span>
-    </a>
-    <a href="#" class="link">
-      <span class="icon">&#128205;</span>
-      <span>GOOGLE MAPS LOCATION</span>
-      <span class="arrow">&#8250;</span>
-    </a>
+    <div class="section-title">✦ الروابط الرسمية ✦</div>
+
+    <!-- قائمة الروابط -->
+    <div class="links">
+      
+      <!-- زر المنيو الإلكتروني الرئيسي -->
+      <button class="link featured" onclick="openMenuModal()">
+        <span class="icon">📖</span>
+        <span>المنيو الإلكتروني | MENU</span>
+        <span class="arrow">❮</span>
+      </button>
+
+      <!-- موقع الفرع -->
+      <a href="https://maps.google.com" target="_blank" class="link">
+        <span class="icon">📍</span>
+        <span>موقعنا على الخريطة</span>
+        <span class="arrow">❮</span>
+      </a>
+
+      <!-- واتساب -->
+      <a href="https://wa.me/201000000000" target="_blank" class="link">
+        <span class="icon">💬</span>
+        <span>تواصل معنا عبر واتساب</span>
+        <span class="arrow">❮</span>
+      </a>
+
+      <!-- انستغرام -->
+      <a href="https://instagram.com" target="_blank" class="link">
+        <span class="icon">📸</span>
+        <span>حسابنا على إنستغرام</span>
+        <span class="arrow">❮</span>
+      </a>
+
+      <!-- تيك توك -->
+      <a href="https://tiktok.com" target="_blank" class="link">
+        <span class="icon">🎵</span>
+        <span>تابعنا على تيك توك</span>
+        <span class="arrow">❮</span>
+      </a>
+
+    </div>
+
+    <!-- كارت تقييم جوجل -->
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <h2>يهمنا رأيكم!</h2>
+      <p>ساعدنا في تقديم أفضل خدمة دائماً من خلال تقييم تجربتك في إيلان كافيه على جوجل.</p>
+      <button class="review-btn" onclick="window.open('https://maps.google.com', '_blank')">
+        إضافة تقييم على Google Reviews
+      </button>
+    </div>
+
+    <footer>
+      © 2026 ELAN KAFE. ALL RIGHTS RESERVED
+    </footer>
   </div>
 
-  <div class="review-card">
-    <h2>RATE YOUR EXPERIENCE</h2>
-    <p>We value your feedback. Leave us a review on Google Maps to help us improve our service.</p>
-    <button class="review-btn">LEAVE A GOOGLE REVIEW</button>
-    <p class="review-hint">Takes less than 1 minute &bull; Highly appreciated</p>
+  <!-- نافذة المنيو (Modal) -->
+  <div class="modal" id="menuModal">
+    <button class="close-btn" onclick="closeMenuModal()" title="إغلاق">✕</button>
+    <div class="modal-inner">
+      <div class="menu-head">✦ صفحات المنيو الإلكتروني ✦</div>
+      <div class="menu-pages">
+        <!-- استبدل الرابط بصور المنيو الخاصة بك -->
+        <div class="menu-page">
+          <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=800&auto=format&fit=crop&q=80" alt="منيو 1">
+        </div>
+        <div class="menu-page">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&auto=format&fit=crop&q=80" alt="منيو 2">
+        </div>
+      </div>
+    </div>
   </div>
 
-  <footer>
-    &copy; ELAN KAFE. ALL RIGHTS RESERVED.
-  </footer>
-</div>
+  <!-- برمجة فتح وإغلاق المودال -->
+  <script>
+    function openMenuModal() {
+      document.getElementById('menuModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenuModal() {
+      document.getElementById('menuModal').classList.remove('open');
+      document.body.style.overflow = 'auto';
+    }
+
+    // إغلاق المودال عند الضغط على زر Esc
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeMenuModal();
+      }
+    });
+  </script>
 </body>
 </html>
